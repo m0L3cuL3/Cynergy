@@ -7,8 +7,8 @@ var https = require('https');
 var chalk = require('chalk');
 var fs = require('fs');
 
-var log = require('./lib/log.js');
-var utils = require('./lib/utils.js');
+var log = require('./backend/lib/log.js');
+var utils = require('./backend/lib/utils.js');
 var config = require('./config.json');
 var pack = require('./package.json');
 var path = require('path');
