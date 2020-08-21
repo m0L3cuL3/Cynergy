@@ -125,7 +125,11 @@ Post-conditions:
 ```
 ## UML diagrams
 ---
+**Use Case Diagram**
 ![use-case-diagram](/screenshots/use-case-diagram.png)
+
+**Class Diagram**
+![class-diagram](/screenshots/class-diagram.png)
 ## Usage
 ---
 Install  package dependencies using **npm**.
