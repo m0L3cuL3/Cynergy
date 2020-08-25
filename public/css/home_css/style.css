@@ -38,3 +38,26 @@ button {
 #cards {
     font-family: 'Russo One', sans-serif;
 }
+
+@media screen and (max-width: 1060px) {
+    #web{ 
+        margin: auto;
+        width:67%; 
+        height:150px;
+    }
+
+    #download{ 
+        margin: auto;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        width:67%; 
+        height:150px;
+    }
+
+    .btn {
+        font-size: 12px;
+        margin: auto;
+        margin-top: 5px;
+        width:67%;
+    }
+}

@@ -66,6 +66,16 @@ app.get('/editor', (req, res) => {
     res.render('editor');
 });
 
+// restful api for all users
+app.get('/api/chat/users', (req, res) => {
+    const status = Object.keys(users).length;
+    const uuid = Object.keys(clients)
+    res.setHeader('Content-Type', 'application/json');
+    res.end(JSON.stringify({
+        online: status,
+        uid: uuid
+    }));
+});
 
 /* Logic */
 chat.on('connection', (conn) => {
