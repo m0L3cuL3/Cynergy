@@ -7,6 +7,12 @@
     <link rel="stylesheet" href="assets/style.css">
     <script src="assets/codemirror.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ripples.css" rel="stylesheet">
+    <link href="css/material-wfont.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+
     <!--- CodeMirror syntax highlighting -->
     <script src="https://codemirror.net/mode/css/css.js"></script>
     <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
@@ -26,6 +32,7 @@
         </span>
     </div>
     <ul class="drop" style="display:none">
+        <li><span class="badge label-success">online users: <%= online %></span></li>
         <li onclick="toggleThemePanel();toggleMenu();">Theme settings</li>
         <li onclick="togglePreview();toggleMenu();">Disable live preview</li>
     </ul>
@@ -41,7 +48,7 @@
                     </div>
                     <div class="tab" aria-editor="js">
                         JS
-                    </div>
+                    </div>     
                 </div>
                 <div class="editors">
                     <div class="e html"></div>
@@ -65,7 +72,10 @@
             </select>
             <i class="material-icons">keyboard_arrow_down</i>
         </div>
-        <span class="close" onclick="toggleThemePanel()">&times;</span>
+        <span class="close" onclick="toggleThemePanel()">&times;</span>  
+    </div>
+    <div id="user-panel" style="display:none">
+
     </div>
     <script src="assets/editor.js"></script>
 </body>

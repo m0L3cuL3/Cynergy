@@ -29,7 +29,6 @@ var settings = {
 emojione.ascii = true;
 emojione.imageType = 'png';
 emojione.unicodeAlt = false;
-document.getElementById('version').innerHTML = version;
 
 
 /* Connection */

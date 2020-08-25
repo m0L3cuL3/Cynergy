@@ -63,7 +63,7 @@ app.get('/chat', (req, res) => {
 
 // render web editor application
 app.get('/editor', (req, res) => {
-    res.render('editor');
+    res.render('editor', {online: Object.keys(users).length});
 });
 
 // restful api for all users
