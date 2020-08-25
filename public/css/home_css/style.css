@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Russo+One&display=swap');
+
+body {
+    background-color: rgb(74, 98, 121);
+}
+
+.jumbotron {
+    color: white;
+    background-image: linear-gradient(to bottom, rgb(59, 71, 110), rgb(51, 71, 90));
+}
+
+.card {
+    border-radius: 20px;
+    width: 45vw;
+    height: 20vh;
+    background-image: linear-gradient(to bottom, rgb(31, 44, 58), rgb(15, 25, 35));
+}
+
+h1 {
+    font-family: 'Russo One', sans-serif;
+    text-shadow: 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+h4 {
+    color: white;
+    font-family: 'Russo One', sans-serif;
+}
+
+p {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-shadow: 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+button {
+    width: 20vw;
+}
+
+#cards {
+    font-family: 'Russo One', sans-serif;
+}

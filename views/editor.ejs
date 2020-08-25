@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/style.css">
+    <script src="assets/codemirror.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!--- CodeMirror syntax highlighting -->
+    <script src="https://codemirror.net/mode/css/css.js"></script>
+    <script src="https://codemirror.net/mode/javascript/javascript.js"></script>
+    <script src="https://codemirror.net/mode/xml/xml.js"></script>
+    <script src="https://codemirror.net/mode/htmlmixed/htmlmixed.js"></script>
+    <!-- Editor styling -->
+    <link aria-rel="xor-syntax-styling" rel="stylesheet" href="assets/syntax-xor-dark.css">
+    <link aria-rel="xor-editor-styling" rel="stylesheet" href="assets/codemirror-xor-dark.css">
+    <title>Cynergy Web Editor</title>
+</head>
+<body>
+    <div class="navbar">
+        <span><a href="/">Home</a></span>
+        <span><a href="/chat">Chat</a></span>
+        <span class="right">
+            <a class="mi" onclick="toggleMenu()"><i class="material-icons">more_vert</i></a>
+        </span>
+    </div>
+    <ul class="drop" style="display:none">
+        <li onclick="toggleThemePanel();toggleMenu();">Theme settings</li>
+        <li onclick="togglePreview();toggleMenu();">Disable live preview</li>
+    </ul>
+    <div class="editor-container">
+        <div class="left">
+            <div class="editor">
+                <div class="tabs">
+                    <div class="tab active" aria-editor="html">
+                        HTML
+                    </div>
+                    <div class="tab" aria-editor="css">
+                        CSS
+                    </div>
+                    <div class="tab" aria-editor="js">
+                        JS
+                    </div>
+                </div>
+                <div class="editors">
+                    <div class="e html"></div>
+                    <div class="e css"></div>
+                    <div class="e js"></div>
+                </div>
+            </div>
+        </div>
+        <iframe seamless="1" frameborder="0" style="display:block">
+        </iframe>
+    </div>
+    <div id="panel" style="display:none">
+        <div class="header">
+            <h1>Theme Settings</h1>
+        </div>
+        <div class="section">
+            <h4>Choose Theme</h4>
+            <select onchange="changeTheme(this.value)">
+                <option value="xor-dark">Cynergy Dark</option>
+                <option value="xor-light">Cynergy Light</option>
+            </select>
+            <i class="material-icons">keyboard_arrow_down</i>
+        </div>
+        <span class="close" onclick="toggleThemePanel()">&times;</span>
+    </div>
+    <script src="assets/editor.js"></script>
+</body>

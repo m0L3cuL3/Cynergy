@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--/ IMPORTS /-->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/ripples.css" rel="stylesheet">
+    <link href="css/material-wfont.min.css" rel="stylesheet">
+    <link href="css/jquery-ui.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/home_css/style.css">
+
+    <title>Cynergy</title>
+</head>
+<body>
+    <div class="container-fluid main">
+        <div class="row">
+            <div class="jumbotron jumbotron-fluid text-center">
+                <img src="img/test.gif" alt="Cynergy Logo" style="width:120px;">
+                <h1 class="display-3">Cynergy</h1>
+                <span class="badge label-success">online users: <%= online %></span>
+                <span class="badge label-warning">version: <%= version %></span>
+                <p class="lead">A Real-Time Application that provides real-time communication and real-time website editor.</p>
+            </div>
+        </div>
+        <div class="text-center" id="cards">
+            <div class="card card-body text-center">
+                <h4 class="card-title">Use Web Application</h4>
+                <a href="/chat">
+                    <button type="button" class="btn btn-success">Chat</button>
+                </a>
+                <a href="/editor">
+                    <button type="button" class="btn btn-success">Web Editor</button>
+                </a>  
+            </div>
+            <div class="card card-body text-center">
+                <h4 class="card-title">Download Desktop Application</h4>
+                <a href="">
+                    <button type="button" class="btn btn-info">Windows (7/8/8.1/10)</button>
+                </a>
+                <a href="">
+                    <button type="button" class="btn btn-info">Linux (Debian-based)</button>
+                </a>
+            </div>
+        </div>  
+    </div>
+</body>
+</html>

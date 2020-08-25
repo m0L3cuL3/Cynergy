@@ -244,7 +244,7 @@ var connect = () => {
         if(data.type == 'global' || data.type == 'pm' || data.type == 'mention') {
             if(!focus) {
                 unread++;
-                document.title = '(' + unread + ') Cynergy';
+                document.title = '(' + unread + ') Notification';
 
                 // play sound when browser receives a message
                 if(settings.sound) {
@@ -593,10 +593,6 @@ $(document).ready( () => {
         $('#options-dialog').modal('show');
     });
 
-    $('#menu-options').bind('click', () => {
-        $('#options-dialog').modal('show');
-    });
-
     $('#emoji').bind('change', () => {
         settings.emoji = document.getElementById('emoji').checked;
         localStorage.settings = JSON.stringify(settings);
@@ -684,7 +680,7 @@ if(typeof(Storage) !== 'undefined') {
 }
 
 window.onfocus = () => {
-    document.title = 'Cynergy';
+    document.title = 'Cynergy Chat';
     focus = true;
     unread = 0;
 };

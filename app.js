@@ -50,8 +50,20 @@ app.locals.version = pack.version;
 
 /* Routes */
 app.use(config.url, express.static(path.join(__dirname, 'public')));
+
+// render home page
 app.get(config.url, (req, res) => {
-    res.render('index', {version:pack.version});
+    res.render('home', {online: Object.keys(users).length, version:pack.version});
+});
+
+// render chat application
+app.get('/chat', (req, res) => {
+    res.render('chat', {version:pack.version});
+});
+
+// render web editor application
+app.get('/editor', (req, res) => {
+    res.render('editor');
 });
 
 

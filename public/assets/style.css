@@ -1,0 +1,257 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,500|Ubuntu+Mono');
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: hsla(0,0%,100%,.87);
+    background-color: white;
+    margin: 0;
+    margin-top: 55px;
+    overflow: hidden;
+}
+
+.material-icons {
+    font-size: inherit;
+    position: relative;
+    top: 2px;
+    z-index: 0;
+}
+
+.navbar {
+    z-index: 10002;
+    color: hsla(0,0%,100%,.87);
+    background-color: rgb(0, 149, 135);
+    padding: 17px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    font-size: 15px;
+}
+
+.navbar span {
+    float: left;
+    padding: 0 3px;
+}
+
+.navbar .right {
+    float: right;
+}
+
+.navbar a {
+    padding: 15px;
+    text-decoration: none;
+    color: rgba(255,255,255,.56);
+    transition: .3s;
+    overflow: hidden;
+    cursor: pointer;
+    display: inline;
+    z-index: 9997;
+    user-select: none;
+}
+
+a.mi:hover {
+    border-bottom: none !important;
+}
+
+.navbar a:hover, .navbar .active {
+    border-bottom: 2px solid rgba(255,255,255,.87);
+    color: rgba(255,255,255,.87);
+}
+
+.editor-container {
+    display: flex;
+    flex-direction: row;
+    align-items: stretch;
+    position: fixed;
+    top: 53px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+}
+
+iframe, .editor {
+    flex: 0 0 50%;
+    max-width: 50vw;
+    min-width: 50vw;
+    min-height: calc(100vh - 53px);
+    max-height: calc(100vh - 53px);
+    overflow-y: scroll !important;
+}
+
+.CodeMirror {
+    min-height: calc(100vh - 53px);
+}
+
+.editor {
+    overflow-x: hidden !important;
+}
+
+.swal-overlay {
+    overflow: hidden;
+}
+
+.swal-modal {
+    background-color: rgb(44,47,51);
+    border-radius: 2px;
+}
+
+.swal-title {
+    color: rgba(255,255,255,.78);
+    font-weight: 400;
+}
+
+.swal-text {
+    color: rgba(255,255,255,.56);
+}
+
+.swal-button {
+    font-size: 14px;
+    border: none;
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0);
+    color: #4286f4;
+}
+
+.swal-button:hover {
+    background-color: rgb(35,39,42);
+    border: none;
+    box-shadow: none;
+}
+
+.swal-button:focus {
+    color: #41b2f4;
+    border: none;
+    box-shadow: none;
+}
+
+.drop {
+    position: absolute;
+    padding: 0px;
+    list-style-type: none;
+    z-index: 10003;
+    border-radius: 10px;
+    position: absolute;
+    top: 25px;
+    right: 20px;
+    background-color: #263238;
+}
+
+.drop li {
+    padding: 12px 1em;
+    min-width: 150px;
+    font-size: 90%;
+    transition: .3s;
+    z-index: 10000;
+    background-color: inherit;
+    border-radius: 10px;
+    color: rgba(255,255,255,.87);
+    cursor: pointer;
+}
+
+.drop li:hover {
+    background-color: #232E33;
+}
+
+.drop li .right {
+    text-align: right;
+    float: right;
+    color: rgba(255,255,255,.56);
+}
+
+#panel {
+    border-radius: 12px;
+    z-index: 10001;
+    position: absolute;
+    width: 450px;
+    height: 350px;
+    top: 15%;
+    right: calc(50% - 250px);
+    background-color: white;
+    color: rgba(0,0,0,.87);
+    box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
+}
+
+#panel .header {
+    border-radius: 12px 12px 0px 0px;
+    background-color: rgb(0, 149, 135);
+    padding: .7em;
+    text-align: center;
+}
+
+#panel .header h1 {
+    font-weight: 400;
+    color: rgba(255,255,255,.87);
+}
+
+#panel span.close {
+    position: absolute;
+    top: 5px;
+    right: 9px;
+    color: rgba(255,255,255,.65);
+    cursor: pointer;
+}
+
+#panel .section {
+    padding: .5em;
+}
+
+#panel h4 {
+    font-weight: 400;
+    margin: .5em;
+}
+
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    width: 150px;
+    border: none;
+    outline: none;
+    border-bottom: 1.5px solid #555;
+    padding: 7px;
+    color: rgba(0,0,0,.65);
+    font-family: 'Roboto';
+    font-size: 14px;
+}
+
+select ~ i.material-icons {
+    position: relative;
+    right: 24px;
+    top: 7px;
+    color: rgba(0,0,0,.56);
+    font-size: 140%;
+    transform: rotateZ(0deg);
+    transition: .7s;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    user-select: none;
+}
+
+option {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    padding: 7px;
+    color: rgba(0,0,0,.65);
+    border: none;
+    outline: none;
+}
+
+@media (max-width: 900px) {
+    .editor {
+        right: 0;
+        bottom: 45%;
+    }
+
+    .editor.noiframe {
+        bottom: 0;
+    }
+
+    iframe {
+        left: 0;
+        bottom: 0;
+        top: unset;
+        margin: auto;
+    }
+}
