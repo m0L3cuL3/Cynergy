@@ -5,6 +5,7 @@
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/style.css">
+
     <script src="assets/codemirror.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
@@ -21,12 +22,13 @@
     <!-- Editor styling -->
     <link aria-rel="xor-syntax-styling" rel="stylesheet" href="assets/syntax-xor-dark.css">
     <link aria-rel="xor-editor-styling" rel="stylesheet" href="assets/codemirror-xor-dark.css">
+
     <title>Cynergy Web Editor</title>
 </head>
 <body>
     <div class="navbar">
-        <span><a href="/">Home</a></span>
-        <span><a href="/chat">Chat</a></span>
+        <span><a id="home" href="/">Home</a></span>
+        <span><a id="chat" href="/chat">Chat</a></span>
         <span class="right">
             <a class="mi" onclick="toggleMenu()"><i class="material-icons">more_vert</i></a>
         </span>
@@ -77,5 +79,5 @@
     <div id="user-panel" style="display:none">
 
     </div>
-    <script src="assets/editor.js"></script>
+    <script defer src="assets/editor.js"></script>
 </body>

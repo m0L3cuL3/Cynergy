@@ -91,10 +91,6 @@ function toggleThemePanel() {
     //$(".editor").toggle();
 }
 
-window.onbeforeunload = function(){
-    return "Are you sure that you want to leave without saving your changes?"
-}
-
 function changeTheme(value) {
     document.querySelector("*[aria-rel=xor-editor-styling]").outerHTML = "";
     document.querySelector("*[aria-rel=xor-syntax-styling]").outerHTML = "";
