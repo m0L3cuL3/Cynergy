@@ -1,6 +1,6 @@
 ## Cynergy
 ---
-**Cynergy** is a real-time chat application that allows multiple users to communicate with each other and provides a real-time web editor. It also supports cross-platform application.
+**Cynergy** is a real-time chat application that allows multiple users to communicate with each other and provides a real-time web editor. It also supports cross-platform application. Desktop version of Cynergy is found [here](https://github.com/m0L3cuL3/Cynergy-Win-Linux)
 
 ### Supported Platforms
 - Web
